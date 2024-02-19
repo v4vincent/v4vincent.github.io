@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="texas_icon.png">
+  <title>Contact Us</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="texas_seal.png" alt="Texas state seal" style="width: 100px; height: 100px; padding: 10px;"></a>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about_texas.html">About Texas</a></li>
+      <li class="dropdown">
+        <a href="#">Cities</a>
+        <ul class="dropdown-menu">
+          <li><a href="austin.html">Austin</a></li>
+          <li><a href="dallas.html">Dallas</a></li>
+          <li><a href="houston.html">Houston</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Attractions</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <section>
+  <div class="message">
+    <aside style="align-items: center;">
+        <p><em>Texas is a friendly state! Please let us know how we can serve you better.</em></p>
+      </aside>
+    <h2 style="text-align: center;">Let us know what you think!</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="email">Confirm Email:</label>
+        <input type="email" id="confirm-email" name="email" required placeholder="Confirm your email">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required placeholder="Enter subject">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Enter your message here"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const emailInput = document.getElementById("email");
+        const confirmEmailInput = document.getElementById("confirm-email");
+    
+        confirmEmailInput.addEventListener("input", () => {
+          if (emailInput.value !== confirmEmailInput.value) {
+            confirmEmailInput.setCustomValidity("Email addresses must match");
+          } else {
+            confirmEmailInput.setCustomValidity("");
+          }
+        });
+      </script>
+      
+  </div>
+  
+</section>
+
+</body>
+
+<footer>
+    
+</footer>
+</html>
